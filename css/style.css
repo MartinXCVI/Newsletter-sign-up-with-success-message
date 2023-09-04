@@ -1,0 +1,422 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+:root {
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Tomato: hsl(4, 100%, 67%);
+    --darkTomato: hsl(4, 100%, 55%);
+}
+
+
+/*----------------------------------------------------------------*/
+
+.hideMe {
+    display: none !important;
+}
+
+.showMe {
+    display: inherit;
+}
+
+/*----------------------HOVER/FOCUS effects---------------------*/
+
+#submit-btn:hover, #dismiss-btn:hover {
+    background-position: right;
+}
+
+#mail:hover {
+    border: 1px solid var(--CharcoalGrey);
+}
+
+#myInfo p a:hover, #myInfo p a:focus {
+    text-decoration: underline;
+}
+
+/*----------------------------------------------------------------*/
+
+/*-------------------------GENERAL CSS----------------------------*/
+
+body {
+    background-color: var(--DarkSlateGrey) !important;
+}
+
+h2 {
+    font-weight: 700 !important;
+    color: var(--DarkSlateGrey);
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--DarkSlateGrey)
+}
+
+#errorMessage {
+    color: var(--darkTomato);
+}
+
+#myFormu {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    background-color: var(--White);
+    padding-left: 0em !important;
+    padding-right: 0em !important;
+}
+
+ul {
+    padding-left: 0rem !important;
+}
+
+ul li {
+    list-style: none;
+}
+
+.fig-illus-mobile img {
+    width: 100%;
+}
+
+/*-----------------------END: GENERAL CSS-------------------------*/
+
+/*----------------------320px--------------------------*/
+
+@media all and (min-width: 320px) {
+
+    #desktop-section {
+        display: none;
+    }
+
+    #myContainer {
+        padding-bottom: 0.5em;
+    }
+
+    #myArti, #myFormu, #successArti {
+        padding-left: 1em !important;
+        padding-right: 1em !important;
+    }
+
+    #myArti, #successArti {
+        font-size: 0.9em;
+    }
+
+    #myList {
+        width: 100%;
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+    }
+
+    #myList li {
+        width: 100%;
+        display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start;
+    }
+
+    #myList li p {
+        width: 90%;
+    }
+
+    .fig-icon-list {
+        width: 7%;
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+    }
+
+    .fig-icon-list img {
+        width: 100%;
+        padding-top: 0.2em;
+    }
+
+    #myFormu {
+        display: grid;
+        gap: 0.5em;
+        font-weight: 700;
+        font-size: 0.8em;
+        padding: 0.5em;
+    }
+
+    #mail {
+        width: 100%;
+        border: 1px solid var(--Grey);
+        border-radius: 0.5em;
+        padding: 1em;
+        padding-left: 1.5em;
+        cursor: pointer;
+    }
+
+    #submit-btn, #dismiss-btn {
+        width: 100%;
+        background-image: linear-gradient(to right, var(--CharcoalGrey) 55%, var(--Tomato), var(--darkTomato));
+        background-size: 300%;
+        background-position: left;
+        transition: background-position 1s linear;
+        border-radius: 0.5em;
+        padding: 1em;
+        color: var(--White);
+        cursor: pointer;
+    }
+
+    #dismiss-btn {
+        padding: 0.8em;
+        font-size: 0.9em;
+    }
+
+    #success-section {
+        height: 100vh;
+        display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    .fig-icon-success {
+        width: 100%;
+    }
+    
+    #dismissBtnSection {
+        width: 95%;
+    }
+
+    .division-line {
+        display: block;
+        width: 90% !important;
+        height: 2px;
+        border-top: 3px solid;
+        border-radius: 10px;
+    }
+
+    #myInfo {
+        font-size: 0.7em;
+    }
+
+    #myInfo p a {
+        text-decoration: none;
+    }
+
+}
+/*--------------------END: 320px-----------------------*/
+
+/*----------------------480px--------------------------*/
+
+@media all and (min-width: 480px) {
+
+    #myArti, #myFormu, #successArti {
+        padding-left: 2em !important;
+        padding-right: 2em !important;
+    }
+
+    #myList li p {
+        padding-top: 0.3em !important;
+    }
+
+    #myInfo {
+        font-size: 0.8em;
+    }
+
+    #dismissBtnSection {
+        width: 90%;
+    }
+
+}
+
+/*--------------------END: 480px-----------------------*/
+
+/*----------------------576px--------------------------*/
+
+@media all and (min-width: 576px) {
+
+    #principal {
+        height: 100vh;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    
+    #myContainer {
+        width: 90%;
+        border-radius: 2em;
+    }
+
+    #success-section {
+        width: 75%;
+        height: 70vh;
+        margin: 0 auto;
+        border-radius: 2em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fig-illus-mobile {
+        padding-top: 0.6em;
+    }
+
+    .fig-illus-mobile img {
+        border-radius: 1em;
+    }
+
+}
+
+/*--------------------END: 576px-----------------------*/
+
+/*----------------------768px--------------------------*/
+
+@media all and (min-width: 768px) {
+
+    #myContainer {
+        width: 75%;
+    }
+
+    #myList li p {
+        padding-top: 0.5em !important;
+    }
+
+    h2 {
+        margin-bottom: 0.5em !important;
+    }
+
+    #success-section {
+        width: 65%;
+    }
+
+}
+
+/*--------------------END: 768px-----------------------*/
+
+/*---------------------1024px--------------------------*/
+
+@media all and (min-width: 1024px) {
+
+    #principal {
+        width: 100%;
+        min-height: 100vh;
+        padding-top: 4em;
+        padding-bottom: 4em;
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+    }
+
+    h2 {
+        padding-top: 0.7em !important;
+    }
+
+    #myContainer {
+        width: 60%;
+        display: flex; flex-direction: row; justify-content: space-evenly;
+    }
+
+    .fig-illus-mobile {
+        display: none;
+    }
+
+    #son-container {
+        display: flex; flex-direction: column; justify-content: center;
+        border-radius: 2em !important;
+        overflow: hidden;
+    }
+
+    #myList li p {
+        padding-top: 0.1em !important;
+    }
+
+    #desktop-section {
+        width: 50%;
+        min-width: 50%;
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+    }
+
+    #desktop-section figure {
+        width: 90%;
+        padding-top: 1em;
+    }
+
+    #desktop-section figure img {
+        width: 100%;
+    }
+
+    #success-section {
+        width: 40%;
+        justify-content: space-around;
+    }
+
+}
+
+/*--------------------END: 1024px----------------------*/
+
+/*---------------------1280px--------------------------*/
+
+@media all and (min-width: 1280px) {
+
+    #myContainer {
+        width: 55%;
+    }
+
+    .fig-illus-mobile, #myArti, #myFormu, #myInfo, #myArti h2 {
+        margin-bottom: 0.5em !important;
+    }
+
+    #desktop-section figure {
+        width: 100%;
+        padding-right: 1em;
+    }
+
+    #success-section {
+        height: 55vh;
+        width: 35%;
+    }
+}
+
+/*--------------------END: 1280px----------------------*/
+
+/*---------------------1366px--------------------------*/
+
+@media all and (min-width: 1366px) {
+
+    #myContainer {
+        width: 50%;
+        align-items: center;
+    }
+
+    #desktop-section figure {
+        padding-top: 0em;
+        padding-right: 1.5em;
+        margin-bottom: 0em;
+    }
+
+    #desktop-section figure img {
+        border-radius: 1.5em;
+    }
+
+    .fig-icon-list, #myList li p {
+        margin-bottom: 0;
+    }
+
+    #myArti {
+        margin-bottom: 0em;
+    }
+
+    #myFormu {
+        margin-bottom: 0em;
+    }
+
+
+}
+
+/*--------------------END: 1366px----------------------*/
+
+/*---------------------1440px--------------------------*/
+
+@media all and (min-width: 1440px) {
+
+    #desktop-section figure {
+        padding-top: 0.7em;
+        padding-bottom: 0.6em;
+        padding-right: 1em;
+    }
+
+    #myFormu {
+        margin-bottom: 0em;
+    }
+
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Font "Roboto" (Weight: 400, 700) {font-family: 'Roboto', sans-serif;}-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-------------------------------------------------------------------------------->
+    <!--CSS Stylesheet-->
+    <link rel="stylesheet" href="css/style.css">
+    <!------------------>
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!----------------->
+    <title>Newsletter Sign Up With Succes Message</title>
+</head>
+<body>
+    
+    <main id="principal">
+            <section id="myContainer" class="container showMe">
+                <section id="son-container">
+                    <figure class="container-fluid fig-illus-mobile">
+                        <img src="imgs/illustration-sign-up-mobile.svg" class="" alt="">
+                    </figure>
+
+                    <article class="container" id="myArti">
+                        <h2>Stay updated!</h2>
+                        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+                        <ul id="myList">
+                            <li><figure class="fig-icon-list"><img src="imgs/icon-list.svg" alt=""></figure><p>Product discovery and building what matters</p></li>
+                            <li><figure class="fig-icon-list"><img src="imgs/icon-list.svg" alt=""></figure><p>Measuring to ensure updates are a success</p></li>
+                            <li><figure class="fig-icon-list"><img src="imgs/icon-list.svg" alt=""></figure><p>And much more!</p></li>
+                        </ul>
+                    </article>
+
+                    <form action="#" method="post" id="myFormu">
+                            <label for="mail">Email address:<p id="errorMessage"></p></label>
+                            
+                            <input type="email" id="mail" placeholder="youremailhere@company.com" name="email">
+                            <button type="submit" id="submit-btn">Suscribe to monthly newsletter</button>
+                    </form>
+                    <hr class="division-line container-fluid">
+                    <div class="container-fluid" id="myInfo">
+                        <p class="text-center">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+                            Coded by <a href="https://github.com/MartinXCVI" target="_blank">MartinXCVI</a>.</p>
+                    </div>
+                </section>
+            <!----Desktop version image---->
+            <section id="desktop-section"><figure><img src="imgs/illustration-sign-up-desktop.svg" alt=""></figure></section>
+            <!----------------------------->
+            </section>
+            
+
+        <!--Success message section-->
+            <section class="container hideMe" id="success-section">
+                <article class="container" id="successArti">
+                    <figure class="fig-icon-success"><img src="imgs/icon-success.svg" class="img-fluid" alt=""></figure>
+                    <h2>Thanks for subscribing!</h2>
+                    <p>A confirmation email has been sent to <strong id="emailPlace"></strong>. 
+                        Please open it and click the button inside to confirm your subscription.</p>
+                </article>
+                <section class="container" id="dismissBtnSection">
+                    <input type="button" id="dismiss-btn" value="Dismiss message">
+                </section>
+                
+            </section>
+        <!--------------------------->
+        
+
+    </main>
+
+
+    <!--Bootstrap JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!------------------------>
+    <!----JavaScript code---->
+    <script src="js/App.js"></script>
+    <!----------------------->
+</body>
+</html>
